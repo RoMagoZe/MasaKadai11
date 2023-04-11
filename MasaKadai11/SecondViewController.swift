@@ -11,6 +11,7 @@ class SecondViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet private weak var tableView: UITableView!
     private let prefectures = Prefectures()
+    var selectedText = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,7 @@ extension SecondViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = prefectures.prefecturesArray[indexPath.row]
-        let preVC = self.presentingViewController as? FirstViewController
-        preVC?.prefectureLabel.text = data
-        dismiss(animated: true)
+        selectedText = data
+        performSegue(withIdentifier: "Segue", sender: nil)
     }
 }

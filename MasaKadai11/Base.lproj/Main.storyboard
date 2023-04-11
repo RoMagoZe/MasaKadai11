@@ -36,7 +36,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="変更"/>
                                         <connections>
-                                            <segue destination="uyD-gP-8yH" kind="presentation" modalPresentationStyle="fullScreen" id="1i8-qZ-rTP"/>
+                                            <segue destination="uyD-gP-8yH" kind="presentation" identifier="Segue" modalPresentationStyle="fullScreen" id="1i8-qZ-rTP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -108,6 +108,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="sAZ-eF-dGO" id="3uo-bs-cO4"/>
+                        <segue destination="WbX-Cg-nIR" kind="unwind" identifier="Segue" unwindAction="unwindWithSegue:" id="FTN-VD-vJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUP-ui-heB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
